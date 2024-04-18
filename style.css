@@ -1,13 +1,11 @@
 .carrousel {
-  transform: scale(0);
-  transition: transform 0.5s;
   position: absolute;
   width: 50%;
   height: 50%;
   border: 2px solid rgb(65, 114, 139);
   background-color: rgba(121, 191, 231, 0.6);
   top: 25%;
-  left: 20%;
+  left: 25%;
   z-index: 1;
 }
 
@@ -17,8 +15,8 @@
   right: 0;
 }
 
-.carrousel--ourir {
-  transform: scale(1);
+.carrousel__figure {
+  position: absolute;
 }
 
 .bouton__ouvrir {
