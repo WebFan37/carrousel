@@ -15,6 +15,10 @@
   right: 0;
 }
 
+.carrousel--ourir {
+  transform: scale(1);
+}
+
 .carrousel__figure {
   position: absolute;
 }
