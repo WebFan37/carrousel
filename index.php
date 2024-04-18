@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Carrousel
- * Author: Eddy Martin
+ * Author: Janne Zhang Ellison
  * Description: Affiche le carrousel associé à une galerie de Wordpress
  * Version: 1.0.0
  * Plugin URI: https://github.com/eddytuto
