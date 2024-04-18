@@ -1,8 +1,22 @@
 .carrousel {
   position: absolute;
-  width: 300px;
-  height: 300px;
-  border: 2px solid #f00;
+  width: 50%;
+  height: 50%;
+  border: 2px solid rgb(65, 114, 139);
+  background-color: rgba(121, 191, 231, 0.6);
+  top: 25%;
+  left: 20%;
+  z-index: 1;
+}
+
+.carrousel__x {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.carrousel--ourir {
+  display: block;
 }
 
 .bouton__ouvrir {
