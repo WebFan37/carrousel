@@ -1,5 +1,7 @@
 .carrousel {
-    
+    transform: scale(0);
+    transition: transform 0.5s;
+
     position: absolute;
     width: 50%;
     height: 50%;
@@ -17,7 +19,7 @@
 }
 
 .carrousel--ourir{
-    display:block; ;
+    transform: scale(1);
 }
 .bouton__ouvrir {
     width : 200px;
