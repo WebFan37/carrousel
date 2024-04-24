@@ -1,24 +1,20 @@
 (function (){
 
-    console.log("Vive Javascript")
+    //console.log("Vive Javascript")
 
      /*************************************************** */
      /*************************************************** */
     //boite carrousel
     let carrousel = document.querySelector('.carrousel')
-    console.log(carrousel.tagName)
 
     //bouton ouvrir
     let bouton = document.querySelector('.bouton__ouvrir')
-    console.log(bouton.tagName)
 
     //bouton fermer
     let boutonfermer = document.querySelector('.carrousel__x')
-    console.log(boutonfermer.tagName)
 
     //bouton galerie
     let galerie = document.querySelector('.galerie')
-    console.log(galerie.tagName)
 
      /*************************************************** */
       /*************************************************** */
@@ -45,6 +41,7 @@
 
      //Image Galerie
      let galerie__img = galerie.querySelectorAll("img")
+        console.log("DISPLAYING ALL IMAGES", galerie__img)
     
      let index = 0
      //Boucle affichage image galerie
@@ -55,7 +52,7 @@
          index = index + 1
  
          //Affichage radio carrousel
-         create__radio_carrousel(index)
+        //  create__radio_carrousel(index)
          
         
      }
@@ -65,12 +62,13 @@
      * @param {*} index le numero de l'image
      * @param {*} unImage l'image de la galerie
      */
-    function create_image_carrousel(index){
-        console.log(galerie__img.src)
-         //Image Carrousel (creation dynamique)
+    function create_image_carrousel(index, unImage){
+        console.log(unImage.src)
+
+         /*=======Image Carrousel (creation dynamique)======*/
         let carrousel__img = document.createElement('img')
         carrousel__img.src = unImage.src
-
+    
         //Ajout de la classe
         carrousel__img.classList.add('carrousel__img')
 
