@@ -111,13 +111,13 @@
     /************************************************** */
 
     //Ouvrir la boite
-    bouton.addEventListener('click', function(){
+    bouton.addEventListener('mousedown', function(){
         carrousel.classList.add('carrousel--ouvrir')
         console.log("Ouvrir")
     })
 
     //Fermer la boite
-    boutonfermer.addEventListener('click', function(){
+    boutonfermer.addEventListener('mousedown', function(){
         carrousel.classList.remove('carrousel--ouvrir')
         console.log("Fermer")
     })
