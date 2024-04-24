@@ -26,6 +26,9 @@
 
  }
 
+
+ // IL faut que wp_head() soit ajoute juste avant la balise head
+ //wp_footer() juste avant la balise body
  add_action('wp_enqueue_scripts','enqueue_style_script');
 
 
@@ -44,5 +47,7 @@ function genere_html(){
     ';
     return $html;
 }
-
+//[carrousel] juste apres a galerie dan votre article ou page
+//Quand la fonction the_content() rencontrera carrousel, c'est a ce moment 
+//que le carrousel sera et initialisé
  add_shortcode('carrousel', 'genere_html');
