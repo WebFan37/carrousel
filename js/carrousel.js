@@ -41,7 +41,7 @@
 
      //Image Galerie
      let galerie__img = galerie.querySelectorAll("img")
-        console.log("DISPLAYING ALL IMAGES", galerie__img)
+        // console.log("DISPLAYING ALL IMAGES", galerie__img)
     
      let index = 0
      //Boucle affichage image galerie
@@ -49,11 +49,10 @@
      {
          //Affichage image galerie
          create_image_carrousel(index, unImage)
-         index = index + 1
  
          //Affichage radio carrousel
          create__radio_carrousel(index)
-         
+         index = index + 1
         
      }
 
@@ -63,7 +62,7 @@
      * @param {*} unImage l'image de la galerie
      */
     function create_image_carrousel(index, unImage){
-        console.log(unImage.src)
+        // console.log(unImage.src) Testing
 
          /*=======Image Carrousel (creation dynamique)======*/
         let carrousel__img = document.createElement('img')
@@ -83,14 +82,16 @@
      * Creer le radio du carrousel
      * @param {*} index le numero de radio
      */
-    function create__radio_carrousel(index){
+    function create__radio_carrousel(){
         let carrousel__radio = document.createElement('input')
-
-        //ajouter classe
-        carrousel__radio.classList.add('carrousel__radio')
+        let carrousel__img = document.querySelectorAll('.carrousel__img')
+        let carrousel__form = document.querySelector('.carrousel__form')
 
         //ajouter index
         carrousel__radio.dataset.index = index
+
+        //ajouter classe
+        carrousel__radio.classList.add('carrousel__radio')
 
         //ajouter type radio
         carrousel__radio.type = 'radio'
@@ -99,17 +100,19 @@
         carrousel__radio.name = 'carrousel__radio'
 
         //ajouter fans carrousel_form
-        carrousel__figure.appendChild(carrousel__radio)
+        carrousel__form.appendChild(carrousel__radio)
 
         //ajouter ecouteur qui permettra de changer l'image du carrousel
-        carrousel__radio.addEventListener('mousedown', function(){
+        carrousel__radio.addEventListener('change', function(e){
 
-            //Change the opacity 
-            carrousel__img.children[index].style.opacity = 1
 
-            //Change the image
-            //Complete par Visual Copilot lol
-            carrousel__img.src = galerie__img[index].src
+            for (const unImage of carrousel__figure.children){
+                unImage.style.opacity = 0
+                //Change the opacity 
+            }
+            carrousel__figure.children[e.target.dataset.index].style.opacity = 1
+            
+            
             
         })
     }
