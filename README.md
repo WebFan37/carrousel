@@ -5,3 +5,6 @@ README for Labo5 BRANCH
 - Navigation entre les images de carrousel (fail)
 - 😓🙄 What a fail... 
 - Je serai hors de zone pour la programmation apres l'etude. Hell nah
+
+
+- Update: Success !
