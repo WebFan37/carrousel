@@ -41,7 +41,7 @@
 
      //Image Galerie
      let galerie__img = galerie.querySelectorAll("img")
-        console.log("DISPLAYING ALL IMAGES", galerie__img)
+        // console.log("DISPLAYING ALL IMAGES", galerie__img)
     
      let index = 0
      //Boucle affichage image galerie
@@ -63,7 +63,7 @@
      * @param {*} unImage l'image de la galerie
      */
     function create_image_carrousel(index, unImage){
-        console.log(unImage.src)
+        // console.log(unImage.src) Testing
 
          /*=======Image Carrousel (creation dynamique)======*/
         let carrousel__img = document.createElement('img')
@@ -85,6 +85,8 @@
      */
     function create__radio_carrousel(index){
         let carrousel__radio = document.createElement('input')
+        let carrousel__img = document.querySelectorAll('.carrousel__img')
+        let carrousel__form = document.querySelector('.carrousel__form')
 
         //ajouter classe
         carrousel__radio.classList.add('carrousel__radio')
@@ -99,17 +101,23 @@
         carrousel__radio.name = 'carrousel__radio'
 
         //ajouter fans carrousel_form
-        carrousel__figure.appendChild(carrousel__radio)
+        carrousel__form.appendChild(carrousel__radio)
 
         //ajouter ecouteur qui permettra de changer l'image du carrousel
-        carrousel__radio.addEventListener('mousedown', function(){
+        carrousel__radio.addEventListener('change', function(){
 
             //Change the opacity 
-            carrousel__img.children[index].style.opacity = 1
+            //carrousel__img.children[index].style.opacity = 1 
+
+            for (const unImage of carrousel__img){
+                unImage.style.opacity = 1 
+                unImage.src = carrousel__img[index].src
+            }
 
             //Change the image
             //Complete par Visual Copilot lol
-            carrousel__img.src = galerie__img[index].src
+            
+            
             
         })
     }

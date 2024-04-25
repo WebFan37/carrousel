@@ -29,6 +29,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  z-index: 2;
 }
 
 .carrousel__x::before {
@@ -45,6 +46,10 @@
 
 .carrousel__figure {
   position: absolute;
+  width: 95%;
+  height: 95%;
+  top: 2.5%;
+  left: 2.5%;
 }
 
 .carrousel__img {
