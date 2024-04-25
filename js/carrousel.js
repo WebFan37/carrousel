@@ -52,7 +52,7 @@
          index = index + 1
  
          //Affichage radio carrousel
-        //  create__radio_carrousel(index)
+         create__radio_carrousel(index)
          
         
      }
@@ -99,14 +99,17 @@
         carrousel__radio.name = 'carrousel__radio'
 
         //ajouter fans carrousel_form
+        carrousel__figure.appendChild(carrousel__radio)
 
         //ajouter ecouteur qui permettra de changer l'image du carrousel
-        carrousel__radio.addEventListener('change', function(){
+        carrousel__radio.addEventListener('mousedown', function(){
 
             //Change the opacity 
             carrousel__img.children[index].style.opacity = 1
 
             //Change the image
+            //Complete par Visual Copilot lol
+            carrousel__img.src = galerie__img[index].src
             
         })
     }
