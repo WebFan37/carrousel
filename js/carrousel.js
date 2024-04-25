@@ -83,18 +83,16 @@
      * Creer le radio du carrousel
      * @param {*} index le numero de radio
      */
-    function create__radio_carrousel(index){
+    function create__radio_carrousel(){
         let carrousel__radio = document.createElement('input')
         let carrousel__img = document.querySelectorAll('.carrousel__img')
         let carrousel__form = document.querySelector('.carrousel__form')
 
+        //ajouter index
         let indexCarrousel = carrousel__radio.dataset.index
 
         //ajouter classe
         carrousel__radio.classList.add('carrousel__radio')
-
-        //ajouter index
-        carrousel__radio.dataset.index = index
 
         //ajouter type radio
         carrousel__radio.type = 'radio'
@@ -108,10 +106,10 @@
         //ajouter ecouteur qui permettra de changer l'image du carrousel
         carrousel__radio.addEventListener('change', function(){
 
-            //Change the opacity 
-            // carrousel__img.children[index].style.opacity = 1 
 
             for (const unImage of carrousel__img){
+
+                //Change the opacity 
                 if (carrousel__radio.dataset.index == indexCarrousel){
                     unImage.style.opacity = 1
                 } else {
