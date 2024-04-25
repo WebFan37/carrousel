@@ -49,11 +49,10 @@
      {
          //Affichage image galerie
          create_image_carrousel(index, unImage)
-         index = index + 1
  
          //Affichage radio carrousel
          create__radio_carrousel(index)
-         
+         index = index + 1
         
      }
 
@@ -89,7 +88,7 @@
         let carrousel__form = document.querySelector('.carrousel__form')
 
         //ajouter index
-        let indexCarrousel = carrousel__radio.dataset.index
+        carrousel__radio.dataset.index = index
 
         //ajouter classe
         carrousel__radio.classList.add('carrousel__radio')
@@ -104,19 +103,14 @@
         carrousel__form.appendChild(carrousel__radio)
 
         //ajouter ecouteur qui permettra de changer l'image du carrousel
-        carrousel__radio.addEventListener('change', function(){
+        carrousel__radio.addEventListener('change', function(e){
 
 
-            for (const unImage of carrousel__img){
-
+            for (const unImage of carrousel__figure.children){
+                unImage.style.opacity = 0
                 //Change the opacity 
-                if (carrousel__radio.dataset.index == indexCarrousel){
-                    unImage.style.opacity = 1
-                } else {
-                    unImage.style.opacity = 0
-                }
-                
             }
+            carrousel__figure.children[e.target.dataset.index].style.opacity = 1
             
             
             
