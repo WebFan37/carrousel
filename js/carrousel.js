@@ -88,6 +88,8 @@
         let carrousel__img = document.querySelectorAll('.carrousel__img')
         let carrousel__form = document.querySelector('.carrousel__form')
 
+        let indexCarrousel = carrousel__radio.dataset.index
+
         //ajouter classe
         carrousel__radio.classList.add('carrousel__radio')
 
@@ -107,15 +109,16 @@
         carrousel__radio.addEventListener('change', function(){
 
             //Change the opacity 
-            //carrousel__img.children[index].style.opacity = 1 
+            // carrousel__img.children[index].style.opacity = 1 
 
             for (const unImage of carrousel__img){
-                unImage.style.opacity = 1 
-                unImage.src = carrousel__img[index].src
+                if (carrousel__radio.dataset.index == indexCarrousel){
+                    unImage.style.opacity = 1
+                } else {
+                    unImage.style.opacity = 0
+                }
+                
             }
-
-            //Change the image
-            //Complete par Visual Copilot lol
             
             
             
