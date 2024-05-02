@@ -16,8 +16,19 @@
     //bouton galerie
     let galerie = document.querySelector('.galerie')
 
+    //bouton gauche et droite
+    let leftButton = document.querySelector('.previous');
+    let rightButton = document.querySelector('.next');
+
      /*************************************************** */
       /*************************************************** */
+
+
+      //BOUTON GAUCHE ET DROITE
+    //=======================//
+    rightButton.addEventListener('click', function(e){
+        console.log("Test")
+        })
 
 
     //Ouvrir la boite
@@ -47,10 +58,10 @@
      //Boucle affichage image galerie
      for (const unImage of galerie__img) 
      {
-         //Affichage image galerie
+         //Affichage image galerie (Fonction)
          create_image_carrousel(index, unImage)
  
-         //Affichage radio carrousel
+         //Affichage radio carrousel (Fonction)
          create__radio_carrousel(index)
          index = index + 1
         
@@ -84,8 +95,8 @@
      */
     function create__radio_carrousel(){
         let carrousel__radio = document.createElement('input')
-        let carrousel__img = document.querySelectorAll('.carrousel__img')
         let carrousel__form = document.querySelector('.carrousel__form')
+        
 
         //ajouter index
         carrousel__radio.dataset.index = index
@@ -102,20 +113,30 @@
         //ajouter fans carrousel_form
         carrousel__form.appendChild(carrousel__radio)
 
-        //ajouter ecouteur qui permettra de changer l'image du carrousel
+        //ajouter ecouteur sur bouttons qui permettra de changer l'image du carrousel
         carrousel__radio.addEventListener('change', function(e){
-
-
+            
             for (const unImage of carrousel__figure.children){
                 unImage.style.opacity = 0
                 //Change the opacity 
             }
             carrousel__figure.children[e.target.dataset.index].style.opacity = 1
-            
-            
-            
         })
+
+        
+       
+       
+
+
     }
+
+    function change_image_precedent_suivant(){
+
+        
+    }
+        
+
+
     
     
 })()
