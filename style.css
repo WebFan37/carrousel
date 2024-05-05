@@ -87,6 +87,10 @@
   align-items: center;
 }
 
+.previous:hover {
+  background-color: rgb(135, 221, 255);
+}
+
 .next {
   position: absolute;
   top: 50%;
@@ -102,4 +106,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.next:hover {
+  background-color: rgb(135, 221, 255);
 }/*# sourceMappingURL=style.css.map */
