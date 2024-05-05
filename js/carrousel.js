@@ -102,6 +102,11 @@
         //Index image ????
         carrousel__img.dataset.index = index
 
+        //Adjuster l'opacité a 1 pour la premiere image
+        if(index == 0){
+            carrousel__img.style.opacity = 1
+        }
+
         //Affichage image carrousel dans la figure
         carrousel__figure.appendChild(carrousel__img)
     }
@@ -131,7 +136,7 @@
         carrousel__form.appendChild(carrousel__radio)
 
         //ajouter ecouteur sur bouttons qui permettra de changer l'image du carrousel
-        carrousel__radio.addEventListener('change', function(event){
+        carrousel__radio.addEventListener('click', function(event){
             
             for (const unImage of carrousel__figure.children){
                 unImage.style.opacity = 0
@@ -227,7 +232,7 @@
 
     
     
-})
+})()
 
 
     
