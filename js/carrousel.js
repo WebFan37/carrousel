@@ -20,6 +20,7 @@
     let leftButton = document.querySelector('.previous');
     let rightButton = document.querySelector('.next');
 
+  
      /*************************************************** */
       /*************************************************** */
 
@@ -228,6 +229,21 @@
 
     }
         
+//=======================//
+//=======================//
+/***************OUVRIR LA BOITE EN CLIQUANT SUR LES IMAGES */
+      //Attraper tous les images de la galerie
+      let imagesGalerie = document.querySelectorAll('.wp-block-image img')
+
+      //Pour chaque image de la galerie, ajouter un ecouteur
+      for (const unImage of imagesGalerie){
+        unImage.addEventListener('click', function(){
+
+            //Ajouter la classe carrousel--ouvrir
+            carrousel.classList.add('carrousel--ouvrir')
+            
+        })
+      }
 
 
     
