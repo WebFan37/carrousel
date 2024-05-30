@@ -51,8 +51,8 @@
 
 .carrousel__figure{
     position: absolute;
-    width: 95%;
-    height: 95%;
+    width: auto;
+    height: auto;
     top: 2.5%;
     left: 2.5%;
     
@@ -63,7 +63,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    object-fit: cover;
+    object-fit:contain;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border-radius: 10px;
 }
